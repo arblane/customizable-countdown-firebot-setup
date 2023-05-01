@@ -8,7 +8,7 @@ Import setup for Firebot by going to Settings > Setups > Import Setup.
 
 Choose the file "Customizable Countdown Timer.firebotsetup" from the location you just downloaded it to, then click Import setup.
 
-#Usage
+# Usage
 
 ## Commands
 + Create a command (or duplicate and modify the sample provided)
