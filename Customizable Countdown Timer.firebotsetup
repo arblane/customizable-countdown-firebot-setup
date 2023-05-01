@@ -1,0 +1,126 @@
+{
+  "name": "Customizable Countdown Timer",
+  "description": "Customizable Countdown Timer. Set duration, text, color, font size, location, and time is up text.",
+  "version": 1,
+  "author": "arblane",
+  "components": {
+    "commands": [
+      {
+        "active": true,
+        "simple": false,
+        "sendCooldownMessage": true,
+        "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+        "cooldown": {},
+        "effects": {
+          "id": "08f2a6a3-01b2-4ec4-bfb5-ed8ee0520327",
+          "list": [
+            {
+              "id": "bace5680-c172-11ec-bb23-2f4dbf6dfa98",
+              "type": "firebot:run-effect-list",
+              "active": true,
+              "listType": "preset",
+              "presetListArgs": {
+                "duration": "15",
+                "title": "Sample!",
+                "textColor": "#AA5DD5",
+                "shadowColor": "#52057C",
+                "positionLeftCenterRight": "center",
+                "textSize": "75",
+                "textSizePx": "75",
+                "positionTopToBottomPx": "750"
+              },
+              "effectList": {
+                "list": [],
+                "id": "bad1b1e0-c172-11ec-bb23-2f4dbf6dfa98"
+              },
+              "presetListId": "cfd57d70-c167-11ec-bb23-2f4dbf6dfa98"
+            }
+          ]
+        },
+        "restrictionData": {
+          "restrictions": [],
+          "mode": "all",
+          "sendFailMessage": true,
+          "failMessage": "Sorry, you cannot use this command because: {reason}"
+        },
+        "aliases": [],
+        "sortTags": [
+          "facfdb35-bb89-41fc-a896-7169ad9f6acf"
+        ],
+        "trigger": "!sampletimer1",
+        "description": "Displays a timer In the overlay for a specified about of time",
+        "id": "dbd9f690-c172-11ec-bb23-2f4dbf6dfa98",
+        "createdBy": "c_k_y",
+        "createdAt": "2022-04-21T06:59:20-06:00",
+        "count": 0,
+        "lastEditBy": "arblane",
+        "lastEditAt": "2023-05-01T15:09:40-04:00",
+        "treatQuotedTextAsSingleArg": false,
+        "hidden": true,
+        "ignoreBot": true
+      }
+    ],
+    "counters": [],
+    "currencies": [],
+    "effectQueues": [],
+    "events": [],
+    "eventGroups": [],
+    "hotkeys": [],
+    "presetEffectLists": [
+      {
+        "name": "OnScreenTimer",
+        "effects": {
+          "list": [
+            {
+              "enterAnimation": "fadeIn",
+              "exitAnimation": "fadeOut",
+              "html": "<div id=\"timer-countdown-$replace[$presetListArg[title], \" \", \"\"]\">\n<style>\n  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');\np.counter-$replace[$presetListArg[title], \" \", \"\"] {\n  color: $presetListArg[textColor];\n  text-align: $presetListArg[positionLeftCenterRight];\n  font-family: 'Open Sans', sans-serif;\n  font-family: 'Roboto', sans-serif;\n  font-size: $presetListArg[textSizePx]px;\n  text-shadow: 5px 3px 10px $presetListArg[shadowColor];\n  padding-right: 30px;\n  padding-top: $presetListArg[positionTopToBottomPx]px;\n  margin-bottom: -20px;\n  position: relative !important;\n}\n#timer-countdown-$replace[$presetListArg[title], \" \", \"\"] {\n  position: relative !important;\n}\n</style>\n<script type=\"text/javascript\">\n  var duration$replace[$presetListArg[title], \" \", \"\"] = $presetListArg[duration]*1000;\n  var countDownDate$replace[$presetListArg[title], \" \", \"\"] = new Date().getTime( ) + duration$replace[$presetListArg[title], \" \", \"\"];\n  var xtimer$replace[$presetListArg[title], \" \", \"\"] = setInterval(function() {\n  var now$replace[$presetListArg[title], \" \", \"\"] = new Date().getTime();\n  var distance$replace[$presetListArg[title], \" \", \"\"] = countDownDate$replace[$presetListArg[title], \" \", \"\"] - now$replace[$presetListArg[title], \" \", \"\"];\n  var hours$replace[$presetListArg[title], \" \", \"\"] = Math.floor((distance$replace[$presetListArg[title], \" \", \"\"] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n  var minutes$replace[$presetListArg[title], \" \", \"\"] = Math.floor((distance$replace[$presetListArg[title], \" \", \"\"] % (1000 * 60 * 60)) / (1000 * 60));\n  var seconds$replace[$presetListArg[title], \" \", \"\"] = Math.floor((distance$replace[$presetListArg[title], \" \", \"\"] % (1000 * 60)) / 1000);\n  if(hours$replace[$presetListArg[title], \" \", \"\"] != 0){\n\thours$replace[$presetListArg[title], \" \", \"\"] = hours$replace[$presetListArg[title], \" \", \"\"] + \":\";\n  }\n  if(minutes$replace[$presetListArg[title], \" \", \"\"] != 0){\n      minutes$replace[$presetListArg[title], \" \", \"\"] = minutes$replace[$presetListArg[title], \" \", \"\"] + \":\";\n  } else {\n      minutes$replace[$presetListArg[title], \" \", \"\"] = \"0:\";\n  }\n  if(seconds$replace[$presetListArg[title], \" \", \"\"] != 0){\n      seconds$replace[$presetListArg[title], \" \", \"\"] = seconds$replace[$presetListArg[title], \" \", \"\"] + \"\";\n  } \n  if(seconds$replace[$presetListArg[title], \" \", \"\"] < 10){\n      seconds$replace[$presetListArg[title], \" \", \"\"] = \"0\" + seconds$replace[$presetListArg[title], \" \", \"\"] + \"\";\n  }\n  /**Now compile the h:m:s**/\n  document.getElementById(\"counter-$replace[$presetListArg[title], \" \", \"\"]\").innerHTML = \"$presetListArg[title] \" \n\t\t+ hours$replace[$presetListArg[title], \" \", \"\"]\n\t\t+ minutes$replace[$presetListArg[title], \" \", \"\"] \n\t\t+ seconds$replace[$presetListArg[title], \" \", \"\"];\n  if (distance$replace[$presetListArg[title], \" \", \"\"] < 0) {\n    clearInterval(xtimer$replace[$presetListArg[title], \" \", \"\"]);\n    document.getElementById(\"counter-$replace[$presetListArg[title], \" \", \"\"]\").innerHTML = \"$presetListArg[timesUpText]\";\n  }\n}, 1000);\n</script>\n<p id=\"counter-$replace[$presetListArg[title], \" \", \"\"]\" class=\"counter-$replace[$presetListArg[title], \" \", \"\"]\"></p>\n</div>",
+              "id": "d1ae0e01-c167-11ec-bb23-2f4dbf6dfa98",
+              "inbetweenAnimation": "none",
+              "length": "$presetListArg[duration]",
+              "type": "firebot:html",
+              "active": true
+            }
+          ],
+          "id": "cfd5cb90-c167-11ec-bb23-2f4dbf6dfa98"
+        },
+        "args": [
+          {
+            "name": "duration"
+          },
+          {
+            "name": "title"
+          },
+          {
+            "name": "textColor"
+          },
+          {
+            "name": "shadowColor"
+          },
+          {
+            "name": "positionLeftCenterRight"
+          },
+          {
+            "name": "textSizePx"
+          },
+          {
+            "name": "positionTopToBottomPx"
+          },
+          {
+            "name": "timesUpText"
+          }
+        ],
+        "sortTags": [
+          "b8568090-5b94-44cb-bc66-dbd54764adf8",
+          "c7299530-6b33-4cfe-9571-984695db5292"
+        ],
+        "id": "cfd57d70-c167-11ec-bb23-2f4dbf6dfa98"
+      }
+    ],
+    "timers": [],
+    "viewerRoles": [],
+    "quickActions": []
+  },
+  "requireCurrency": false,
+  "importQuestions": []
+}
