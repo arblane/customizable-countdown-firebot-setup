@@ -13,14 +13,14 @@ Choose the file "Customizable Countdown Timer.firebotsetup" from the location yo
 ## Commands
 + Create a command (or duplicate and modify the sample provided)
 + Customize the various arguments (* required)
-+ duration - in seconds *
-+ title - text to display to the left of the timer *
-+ textColor - color of the text, can be web color 'red' or hexidecimal #FFF *
-+ shadowColor - shadow color of the text, can be web color 'red' or hexidecimal #FFF *
-+ positionLeftCenterRight - display position (left, center, right) *
-+ textSizePx - text size in pixels *
-+ positionTopToBottomPx - text position from top to bottom in pixels *
-+ timesUpText - text to display briefly when the timer is up
+  + duration - in seconds *
+  + title - text to display to the left of the timer *
+  + textColor - color of the text, can be web color 'red' or hexidecimal #FFF *
+  + shadowColor - shadow color of the text, can be web color 'red' or hexidecimal #FFF *
+  + positionLeftCenterRight - display position (left, center, right) *
+  + textSizePx - text size in pixels *
+  + positionTopToBottomPx - text position from top to bottom in pixels *
+  + timesUpText - text to display briefly when the timer is up
 
 ## Other Information
 + Multiple instances can be created using the same base preset effect list
