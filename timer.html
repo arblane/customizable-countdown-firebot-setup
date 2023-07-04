@@ -1,0 +1,54 @@
+<div id="timer-countdown-$replace[$presetListArg[title], " ", ""]">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
+	p.counter-$replace[$presetListArg[title], " ", ""] {
+		color: $presetListArg[textColor];
+		text-align: $presetListArg[positionLeftCenterRight];
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+		font-size: $presetListArg[textSizePx]px;
+		text-shadow: 5px 3px 10px $presetListArg[shadowColor];
+		padding-right: 30px;
+		padding-top: $presetListArg[positionTopToBottomPx]px;
+		margin-bottom: -20px;
+		position: relative !important;
+}
+#timer-countdown-$replace[$presetListArg[title], " ", ""] {
+  position: relative !important;
+}
+</style>
+<script type="text/javascript">
+  var duration$replace[$presetListArg[title], " ", ""] = $presetListArg[duration]*1000;
+  var countDownDate$replace[$presetListArg[title], " ", ""] = new Date().getTime( ) + duration$replace[$presetListArg[title], " ", ""];
+  var xtimer$replace[$presetListArg[title], " ", ""] = setInterval(function() {
+  var now$replace[$presetListArg[title], " ", ""] = new Date().getTime();
+  var distance$replace[$presetListArg[title], " ", ""] = countDownDate$replace[$presetListArg[title], " ", ""] - now$replace[$presetListArg[title], " ", ""];
+  var hours$replace[$presetListArg[title], " ", ""] = Math.floor((distance$replace[$presetListArg[title], " ", ""] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes$replace[$presetListArg[title], " ", ""] = Math.floor((distance$replace[$presetListArg[title], " ", ""] % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds$replace[$presetListArg[title], " ", ""] = Math.floor((distance$replace[$presetListArg[title], " ", ""] % (1000 * 60)) / 1000);
+  if(hours$replace[$presetListArg[title], " ", ""] != 0){
+	hours$replace[$presetListArg[title], " ", ""] = hours$replace[$presetListArg[title], " ", ""] + ":";
+  }
+  if(minutes$replace[$presetListArg[title], " ", ""] != 0){
+      minutes$replace[$presetListArg[title], " ", ""] = minutes$replace[$presetListArg[title], " ", ""] + ":";
+  } else {
+      minutes$replace[$presetListArg[title], " ", ""] = "0:";
+  }
+  if(seconds$replace[$presetListArg[title], " ", ""] != 0){
+      seconds$replace[$presetListArg[title], " ", ""] = seconds$replace[$presetListArg[title], " ", ""] + "";
+  } 
+  if(seconds$replace[$presetListArg[title], " ", ""] < 10){
+      seconds$replace[$presetListArg[title], " ", ""] = "0" + seconds$replace[$presetListArg[title], " ", ""] + "";
+  }
+  /**Now compile the h:m:s**/
+  document.getElementById("counter-$replace[$presetListArg[title], " ", ""]").innerHTML = "$presetListArg[title] " 
+		+ hours$replace[$presetListArg[title], " ", ""]
+		+ minutes$replace[$presetListArg[title], " ", ""] 
+		+ seconds$replace[$presetListArg[title], " ", ""];
+  if (distance$replace[$presetListArg[title], " ", ""] < 0) {
+    clearInterval(xtimer$replace[$presetListArg[title], " ", ""]);
+    document.getElementById("counter-$replace[$presetListArg[title], " ", ""]").innerHTML = "$presetListArg[timesUpText]";
+  }
+}, 1000);
+</script>
+<p id="counter-$replace[$presetListArg[title], " ", ""]" class="counter-$replace[$presetListArg[title], " ", ""]"></p>
+</div>
