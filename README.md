@@ -21,6 +21,7 @@ Choose the file "Customizable Countdown Timer.firebotsetup" from the location yo
   + textSizePx - text size in pixels *
   + positionTopToBottomPx - text position from top to bottom in pixels *
   + timesUpText - text to display briefly when the timer is up
++ Customize the font-family in the html file, currently set to M PLUS Rounded 1c
 
 ## Other Information
 + Multiple instances can be created using the same base preset effect list
