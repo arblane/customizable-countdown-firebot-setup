@@ -1,14 +1,18 @@
 # customizable-countdown-firebot-setup
 Customizable Countdown Timer. Set duration, text, color, font size, location, and time is up text.
 
+# Compataibility
++ Firebot 5.58.0+
+
 # Install
-To install, download the file "Customizable Countdown Timer.firebotsetup"
-
-Import setup for Firebot by going to Settings > Setups > Import Setup.
-
-Choose the file "Customizable Countdown Timer.firebotsetup" from the location you just downloaded it to, then click Import setup.
++ Download
+  + Customizable Countdown Timer.firebotsetup
++ Import the downloaded firebotsetup file
 
 # Usage
+
+## Overlay
++ This firebotsetup uses the firebot overlay
 
 ## Commands
 + Create a command (or duplicate and modify the sample provided)
