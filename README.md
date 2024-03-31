@@ -2,11 +2,12 @@
 Customizable Countdown Timer. Set duration, text, color, font size, location, and time is up text.
 
 # Compataibility
-+ Firebot 5.58.0+
++ Firebot 5.61.2+
 
 # Install
 + Download
   + Customizable Countdown Timer.firebotsetup
+  + timer.html
 + Import the downloaded firebotsetup file
 
 # Usage
@@ -31,4 +32,4 @@ Customizable Countdown Timer. Set duration, text, color, font size, location, an
 + Multiple instances can be created using the same base preset effect list
 
 # Credits
-Modified setup by C_K_Y
++ Modified setup by C_K_Y
